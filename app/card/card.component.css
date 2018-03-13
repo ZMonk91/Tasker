@@ -1,3 +1,7 @@
+#close-button {
+    float: right;
+}
+
 .card.completed,
 .card.completed .card-footer {
     background-color: #EEE;

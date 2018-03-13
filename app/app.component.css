@@ -1,12 +1,22 @@
-.container {
-    padding-top: 3rem;
+form {
+    padding: 2rem;
 }
 
-.row {
+app-card {
     margin-bottom: 1.5rem;
 }
 
-.form-inline {
+.card.completed,
+.card.completed .card-footer {
+    background-color: #EEE;
+    color: #CCC;
+}
+
+btn.completed {
+    background: #EEE;
+}
+
+form-inline {
     text-align: center;
 }
 
