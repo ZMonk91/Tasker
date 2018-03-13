@@ -11,3 +11,7 @@
 btn.completed {
     background: #EEE;
 }
+
+.card.hidden {
+    display: none;
+}

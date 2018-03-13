@@ -26,6 +26,11 @@ let CardComponent = class CardComponent {
             this.task.started = true;
         }
     }
+    removeTask() {
+        let task = this.task;
+        this.task.hidden = true;
+        console.log(task);
+    }
 };
 __decorate([
     core_1.Input(),

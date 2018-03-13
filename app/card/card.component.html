@@ -1,8 +1,8 @@
 <div class="col-sm-3">
-    <div class="card" style="width: 18rem;" [class.completed]="task.completed">
+    <div class="card" style="width: 18rem;" [class.completed]="task.completed" [class.hidden]="task.hidden">
         <div class="card-header">
             Category: {{task.category}}
-            <a id="close-button" href='#'><i class="fa fa-times" aria-hidden="true"></i></a>
+            <a (click)="removeTask(x)" id="close-button" href='#'><i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
         <div class="card-body">
             <h5 class="card-title">{{ task.title }}</h5>

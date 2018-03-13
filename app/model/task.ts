@@ -6,6 +6,7 @@ export class Task {
         public content: string,
         public completed: boolean,
         public started: boolean,
-        public inProgress: boolean
+        public inProgress: boolean,
+        public hidden: boolean
     ) { }
 }
