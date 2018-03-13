@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form class="form-inline" (ngSubmit)="addTask()" #taskForm="ngForm">
+                <div class="form-group">
+                    <label for="content-field" class="sr-only"></label>
+                    <input type="text" id="content-field" class="form-control" required placeholder="Enter a task..." [(ngModel)]="currentTask.title" name="title">
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="taskForm.form.invalid">
+                    <i class="fa fa-plus" aria-hidde="true"></i> Add Task
+                </button>
+            </form>
+
+        </div>
+    </div>
+    <div class="row offset-2">
+        <app-card *ngFor="let task of tasks" [task]="task">
+        </app-card>
+        <h4 *ngIf="tasks.length == 0">
+            <p>Your task list appears to be empty.</p>
+            <p>Add tasks by using the taskbar above.</p>
+        </h4>
+    </div>
+</div>

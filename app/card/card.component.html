@@ -1,0 +1,14 @@
+<div class="col-sm-3">
+    <div class="card" style="width: 18rem;" [class.completed]="task.completed">
+        <div class="card-header">{{task.category}}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{ task.title }}</h5>
+            <p class="card-text">{{task.content}}</p>
+            <div class="card-footer">
+                <span *ngIf="task.started"><a href="#" class="btn btn-danger" (click)="statusToggle()"><i class="fa fa-times" aria-hidden="true"> Not Started</i></a></span>
+                <span *ngIf="task.completed"><a href="#" class="btn btn-success" (click)="statusToggle()"><i class="fa fa-check" aria-hidden="true"> Completed</i></a></span>
+                <span *ngIf="task.inProgress"><a href="#" class="btn btn-primary" (click)="statusToggle()"><i class="fa fa-clock-o" aria-hidden="true"> In Progress</i></a></span>
+            </div>
+        </div>
+    </div>
+</div>
